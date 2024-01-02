@@ -1,0 +1,21 @@
+<style>
+    .btn-icon::before {
+      color: rgb(205, 4, 4);
+        content: "➜"; /* You can replace this with any text or character you prefer */
+        margin-right: 5px; /* Adjust the spacing between the icon and text */
+    }
+</style>
+
+<div>
+  <span class="btn-icon">click here &nbsp;</span>
+    <button class="btn btn-primary" (click)="onCategoryClick()" style="margin-bottom: 0.5%;border-color: rgb(50, 74, 255);border-radius: 10%;border-width: 0.1cm;">
+        Category
+    </button>
+    <div *ngIf="showSubcategories" class="subcategory-list">
+        <button class="btn btn-primary" (click)="onSubcategoryClick('Routers')" style="margin-inline-end: 0.5%;border-color: rgb(50, 74, 255);border-radius: 10%;border-width: 0.1cm">Routers</button>
+        <button class="btn btn-primary" (click)="onSubcategoryClick('Switches')" style="margin-inline-end: 0.5%;border-color: rgb(50, 74, 255);border-radius: 10%;border-width: 0.1cm">Switches</button>
+        <button class="btn btn-primary" (click)="onSubcategoryClick('Cables')" style="margin-inline-end: 0.5%;border-color: rgb(50, 74, 255);border-radius: 10%;border-width: 0.1cm">Cables</button>
+        <button class="btn btn-primary" (click)="onSubcategoryClick('Modems')" style="margin-inline-end: 0.5%;border-color: rgb(50, 74, 255);border-radius: 10%;border-width: 0.1cm">Modems</button>
+
+      </div>
+</div>

@@ -1,0 +1,80 @@
+<!-- <p>add-supplier works!</p> -->
+<html>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="\assets\images\ProTIM Logo.png" alt="Company Logo" width="150">
+        </a>
+        
+        <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item">
+                <b><a class="nav-link" routerLink="/add" >Add Asset</a></b>
+            </li>
+            <li class="nav-item">
+                <b><a class="nav-link" routerLink="/view">View Asset</a></b>
+            </li>
+      
+            <li class="nav-item">
+            <b><a class="nav-link" routerLink="/suppliers">Supplier Info</a></b>
+            </li>
+        </ul>
+      <b><button class="btn btn-danger ml-2" routerLink="/" style="border-color: rgb(205, 4, 4);border-radius: 10%;border-width: 0.1cm;" onclick="location.href='/';">Logout</button></b>
+    </div>
+  </nav>
+
+    <body>
+    
+        <div class="container mt-0">
+            <div class="row">
+                <div class="col-md-12">
+<h2>Update Supplier</h2>
+
+<div class="success-message" *ngIf="showSuccessMessage">
+  <p>Your Supplier-Info has been successfully Updated.</p>
+</div>
+
+<form (ngSubmit)="updateSupplier()">
+    <div class="form-group">
+        <label for="id">Supplier ID:</label>
+        <input type="text" id="id" class="form-control" [(ngModel)]="supplier.id" name="id" required readonly>
+      </div>
+      <div class="form-group">
+        <label for="name">Supplier Name:</label>
+        <input type="text" class="form-control" [(ngModel)]="supplier.name" name="name" required>
+      </div>
+  <div class="form-group">
+    <label for="contactPerson">Contact Person:</label>
+    <input type="text" class="form-control" [(ngModel)]="supplier.contactPerson" required name="contactPerson">
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" [(ngModel)]="supplier.email" required name="email">
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input type="text" class="form-control" [(ngModel)]="supplier.phone" required name="phone">
+  </div>
+  <div class="form-group">
+    <label for="supplierLocation">Supplier Location:</label>
+    <input type="text" class="form-control" [(ngModel)]="supplier.location" required name="location">
+  </div>
+  <div class="form-group">
+    <label for="assetName">Asset Name</label>
+    <input type="text" class="form-control" [(ngModel)]="supplier.assetName" required name="assetName">
+  </div>
+  <!-- <div class="form-group">
+    <label for="quantity">Supply Quantity:</label>
+    <input type="text" class="form-control" [(ngModel)]="supplier.quantity" required name="quantity">
+  </div> -->
+  <button type="submit" class="btn btn-primary" style="margin-inline-end: 0.3cm;border-color: rgb(50, 74, 255);border-radius: 10%;border-width: 0.1cm;">Update</button>
+  <button type="submit" class="btn btn-primary" routerLink="/suppliers" style="border-color: rgb(50, 74, 255);border-radius: 10%;border-width: 0.1cm;">Go Back</button>
+  <!-- <p *ngIf="successMsg" class="text-success">{{ successMsg }}</p> -->
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>
+

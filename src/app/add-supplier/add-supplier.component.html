@@ -1,0 +1,72 @@
+<!-- <p>add-supplier works!</p> -->
+<html>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+      <a class="navbar-brand" href="#">
+          <img src="\assets\images\ProTIM Logo.png" alt="Company Logo" width="150">
+      </a>
+      
+      <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item">
+              <b><a class="nav-link" routerLink="/add" >Add Asset</a></b>
+          </li>
+          <li class="nav-item">
+              <b><a class="nav-link" routerLink="/view">View Asset</a></b>
+          </li>
+          <li class="nav-item">
+          <b><a class="nav-link" routerLink="/suppliers">Supplier Info</a></b>
+          </li>
+      </ul>
+    <b><button class="btn btn-danger ml-2" routerLink="/" style="border-color: rgb(205, 4, 4);border-radius: 10%;border-width: 0.1cm;" onclick="location.href='/';">Logout</button></b>
+  </div>
+</nav>
+
+    <body>
+
+      <div class="success-message" *ngIf="showSuccessMessage">
+        <p>Your Supplier has been successfully added.</p>
+      </div>
+      
+      <div class="container mt-0">
+        <div class="row">
+            <div class="col-md-12">
+<h2>Add Supplier</h2>
+<form (ngSubmit)="addSupplier()" [formGroup]="supplierForm">
+  <div class="form-group">
+    <!-- <label for="supplierId">Supplier ID:</label> -->
+    <input type="hidden" id="supplierId" class="form-control" formControlName="id" hidden>
+  </div>
+  <div class="form-group">
+    <label for="supplierName">Supplier Name:</label>
+    <input type="text" class="form-control" formControlName="name">
+  </div>
+  <div class="form-group">
+    <label for="contactPerson">Contact Person:</label>
+    <input type="text" class="form-control" formControlName="contactPerson">
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" formControlName="email">
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input type="text" class="form-control" formControlName="phone">
+  </div>
+  <div class="form-group">
+    <label for="supplierLocation">Supplier Location:</label>
+    <input type="text" class="form-control" formControlName="location">
+  </div>
+  <div class="form-group">
+    <label for="assetName">Asset Name:</label>
+    <input type="text" class="form-control" formControlName="assetName">
+  </div>
+  <button type="submit" class="btn btn-primary" style="margin-inline-end: 0.3cm;border-color: rgb(50, 74, 255);border-radius: 10%;border-width: 0.1cm;">Add</button>
+  <button type="button" class="btn btn-primary" routerLink="/suppliers" style="border-color: rgb(50, 74, 255);border-radius: 10%;border-width: 0.1cm;">Go Back</button>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>

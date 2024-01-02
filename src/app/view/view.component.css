@@ -1,0 +1,64 @@
+body{
+
+    height:fit-content;
+    background: linear-gradient(to right, #D7E0FF, #E0C3FC);
+
+}  
+ 
+.navbar{
+    /* background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); */
+    background: linear-gradient(to right, #D7E0FF, #E0C3FC);
+    font-family:"-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" ;
+    
+
+
+}
+
+.container h1{
+    font-family:"-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" ;
+    color:rgb(205, 4, 4);
+}
+
+.navbar ul li{
+    float: right;
+    position: relative;
+    /* right: -30px; */
+    line-height: 50px;
+    
+    list-style: none;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    
+    padding: 20px 10px;
+    color:rgb(205, 4, 4);
+}
+
+.navbar ul li a:hover{
+    color:whitesmoke;
+}
+
+.navbar button{
+    background-color: rgb(205, 4, 4);
+    font-weight: bold;
+    color: white;
+    /* line-height: 26px; */
+    
+}
+
+.navbar button:hover{
+    color:rgb(205, 4, 4);
+    background-color: white;
+}
+
+.delete-message{
+    background-color: #a20909; /* Green background color */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+   
+  
+
+

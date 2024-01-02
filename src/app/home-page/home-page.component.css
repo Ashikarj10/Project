@@ -1,0 +1,42 @@
+
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: -webkit-linear-gradient(to right, #D7E0FF, #E0C3FC, #FFD1C9, #D9EAD3); */
+   
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #D7E0FF, #E0C3FC, #c4baf5);
+    color: black;
+    }
+    
+    @media (min-width: 765px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    }
+    div a {
+        background: linear-gradient(to right, #D7E0FF, #E0C3FC);
+        color: black;
+    }
+    
+    .full{
+        height: 100vh;
+        background: linear-gradient(to right, #D7E0FF, #E0C3FC);
+
+    }
+     
+    .custom-login-button {
+        background: rgb(243, 8, 8);
+        color: white;
+        border-radius: 10px; /* Create a circular shape */
+      }
+    

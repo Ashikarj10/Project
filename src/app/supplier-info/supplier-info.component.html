@@ -1,0 +1,83 @@
+<!-- <p>supplier-info works!</p> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prowork Inventory System</title>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="\assets\images\ProTIM Logo.png" alt="Company Logo" width="150">
+        </a>
+        
+        <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item">
+                <b><a class="nav-link" routerLink="/add" >Add Asset</a></b>
+            </li>
+            <li class="nav-item">
+                <b><a class="nav-link" routerLink="/view">View Asset</a></b>
+            </li>
+            <li class="nav-item">
+            <b><a class="nav-link" routerLink="/suppliers">Supplier Info</a></b>
+            </li>
+        </ul>
+      <b><button class="btn btn-danger ml-2" routerLink="/" style="border-color: rgb(205, 4, 4);border-radius: 10%;border-width: 0.1cm;" onclick="location.href='/';">Logout</button></b>
+    </div>
+  </nav>
+<!-- supplier-info.component.html -->
+<body >
+
+<div class="container mt-0">
+    <div class="row">
+      <!-- <div class="col-md-3"> -->
+      </div>
+      <!-- <div class="col-md-9"> -->
+        <h2>Supplier Information</h2> <br>
+
+        <div class="delete-message" *ngIf="showDeleteMessage">
+          <p>The asset was deleted successfully.</p>
+        </div>
+  
+        <!-- Display supplier information here -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+                <th>Supplier Id</th>
+              <th>Supplier Name</th>
+              <th>Contact Person</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Supplier Location</th>
+              <!-- <th>Asset Name</th> -->
+              <!-- <th>Supply Quantity</th> -->
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!--Display your supplier details in rows -->
+            <tr *ngFor="let supplier of suppliers">
+              <td>{{supplier.id }}</td>
+              <td>{{ supplier.name }}</td>
+              <td>{{ supplier.contactPerson }}</td>
+              <td>{{ supplier.email }}</td>
+              <td>{{ supplier.phone }}</td>
+              <td>{{ supplier.location }}</td>
+              <!-- <td>{{supplier.assetName}}</td> -->
+              <!-- <td>{{supplier.quantity}}</td> -->
+              <td>
+              <button class="btn btn-primary" (click)="updateSupplier(supplier.id)" style="margin-inline-end: 0.3cm;border-color: rgb(50, 74, 255);border-radius: 10%;border-width: 0.1cm; height: 1.1cm;width:2cm;">Edit</button>
+              <button class="btn btn-danger" (click)="deleteSupplier(supplier.id)" style="border-color: rgb(205, 4, 4);border-radius: 10%;border-width: 0.1cm;">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <button  class="btn btn-primary"  type="submit" routerLink="/add-supplier" style="border-color: rgb(50, 74, 255);border-radius: 5%;border-width: 0.1cm;">Add Supplier</button>
+      <!-- </div> -->
+    <!-- </div> -->
+  </div>
+</body>
+</html>
+  
+  
